@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DevJobs - Encuentra tu próximo trabajo en tecnología</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#2563EB",
+                        "background-light": "#F8FAFC",
+                        "background-dark": "#101a22",
+                        "container-light": "#FFFFFF",
+                        "container-dark": "#1E293B",
+                        "text-primary-light": "#1E293B",
+                        "text-primary-dark": "#F8FAFC",
+                        "text-secondary-light": "#64748B",
+                        "text-secondary-dark": "#94A3B8",
+                        "accent": "#F97316"
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-text-primary-light dark:text-text-primary-dark">
+<div class="relative flex min-h-screen w-full flex-col group/design-root">
+<div class="layout-container flex h-full grow flex-col">
+<div class="px-4 md:px-10 lg:px-20">
+<div class="layout-content-container mx-auto flex max-w-7xl flex-col flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-gray-200 dark:border-gray-700 py-4">
+<div class="flex items-center gap-4">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path>
+</svg>
+</div>
+<h2 class="text-2xl font-bold tracking-tight">DevJobs</h2>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Buscar Empleo</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Empresas</a>
+<a class="text-sm font-medium hover:text-primary dark:hover:text-primary" href="#">Recursos</a>
+</nav>
+<div class="hidden md:flex items-center gap-2">
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-gray-100 dark:bg-container-dark text-sm font-bold hover:bg-gray-200 dark:hover:bg-gray-700">
+<span class="truncate">Iniciar Sesión</span>
+</button>
+<button class="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-blue-700">
+<span class="truncate">Registrarse</span>
+</button>
+</div>
+<div class="md:hidden">
+<button class="p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="py-16 sm:py-24">
+<div class="text-center">
+<h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tighter">Encuentra el trabajo de tus sueños en tecnología.</h1>
+<p class="mt-4 max-w-2xl mx-auto text-lg text-text-secondary-light dark:text-text-secondary-dark">Busca entre miles de ofertas de las mejores empresas tecnológicas.</p>
+</div>
+<div class="mt-12 max-w-3xl mx-auto bg-container-light dark:bg-container-dark p-4 sm:p-6 rounded-xl shadow-lg">
+<form class="grid sm:grid-cols-2 gap-4">
+<label class="flex flex-col">
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-text-secondary-light dark:text-text-secondary-dark absolute left-4 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary h-14 placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark pl-12 pr-4 text-base" placeholder="Puesto, tecnología..." value=""/>
+</div>
+</label>
+<div class="grid grid-cols-[1fr,auto] gap-2">
+<label class="flex flex-col">
+<div class="relative flex w-full flex-1 items-stretch">
+<div class="text-text-secondary-light dark:text-text-secondary-dark absolute left-4 top-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg border border-gray-300 dark:border-gray-600 bg-background-light dark:bg-background-dark focus:border-primary focus:ring-primary h-14 placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark pl-12 pr-4 text-base" placeholder="Ciudad, país..." value=""/>
+</div>
+</label>
+<button class="flex min-w-[100px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-14 px-6 bg-accent text-white text-base font-bold hover:bg-orange-600">
+<span class="truncate">Buscar</span>
+</button>
+</div>
+</form>
+</div>
+<section class="mt-20">
+<h2 class="text-2xl font-bold tracking-tight px-4 pb-6">Últimas Oportunidades para Ti</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-4">
+<div class="flex flex-col gap-4 p-4 bg-container-light dark:bg-container-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-3">
+<img class="h-12 w-12 rounded-lg" data-alt="Logo of TechCorp" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2mSS9T4B5ooXXAnaswPnJIftI_KL1RHfnPTEgENkSN_ld28Rplm6YR166znZhVaR_DldXwgIURM4lcHagfkCwFU3e-pPTk6xCaSncqEPE8keA4nn2ILgFDMyWTGLrL2DNvE_9xdUwKnTLLC3JNFXkn_evR-3ClfG7QsuYwLS56ddoQy4MKLlSxxn7A24UescL68cXJBmJCeMaGrIpAFxLSVKz0z8MkYE8-_v2szxjfTwWujL70AjBQwVDGdOJt26ZW3PuKtsdY_YM"/>
+<div>
+<p class="font-bold">Frontend Developer</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">TechCorp - Remoto</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">React</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">TypeScript</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-container-light dark:bg-container-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-3">
+<img class="h-12 w-12 rounded-lg" data-alt="Logo of InnovateAI" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn4h29VOyinE4hKA0BtSPNPEqhqn1tThFHuVMubkSrcWn6qMZmyBb_zIBlMTOTk0Na54Djm69R7kajAmp3G-Gg10H4k5s4B-dpCJDl3ruafwd8uRfcT2bQi6zMEq8ukwksAA8PAHTLQTc8DyUEfYkGS9LiDLbyuS1xFLk49HOZlguIPRM23_77d8wGgr5BIHe9jeskIwCxDjHuJe0yqQfJD3DMj0WoGd-IDlbDrosCSBENhz2Yh5SzLF56_IXmiByI4vd6_PWKJ2_b"/>
+<div>
+<p class="font-bold">Data Scientist</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">InnovateAI - Madrid, España</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">Python</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">TensorFlow</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-container-light dark:bg-container-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-3">
+<img class="h-12 w-12 rounded-lg" data-alt="Logo of DevSolutions" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1B-TAHG4gb66KzMhbzvieYSTnrDLty3XCh5mV2g2pFBMMUYUv-488W8IKGjcCumi-t2l3WQTYC3j0sGIKBTGbVIwb-fuWmH00WOZZzJQLz7i8-fsyGHVKkm8TEhSKTSFoNVoeQNUt41cIECwHH5x-K4lUMOovPYQz_Qop-3tFjcmRr238_Ns--yN6iYReQVsT6WrBRYWLGUYW8Y4fx3J8ixemJ5mrvmWbI2fR0tIUkhCKPG2T63qTU-nAKFAznqUqTzyZeU0t6cEJ"/>
+<div>
+<p class="font-bold">Backend Engineer</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">DevSolutions - Barcelona, España</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">Node.js</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">AWS</span>
+</div>
+</div>
+<div class="flex flex-col gap-4 p-4 bg-container-light dark:bg-container-dark rounded-xl shadow-sm hover:shadow-lg transition-shadow duration-300">
+<div class="flex items-center gap-3">
+<img class="h-12 w-12 rounded-lg" data-alt="Logo of CreativeMinds" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4QCBoT2HeRd4X5sxJjTl6ORQleq1CR0FeT7xT-XP4yhVVOoIETAxAerE1tTlw0FCtHA1ZE-3I-m21fNxWWqDbN4837i0W20LrPCnV44w8UDsOyUaEn3-URrRaRB3s8wIskzS--w__6wGkdZFqV3-iYym_Bx6mSjBlVh-6CzhlOjXipemh3XyjAKuJeZiLLqrfYsa1yvBW7kEsLgLcQC-xWSBuGJ-czOggE0vGkdA_tlo_4362MmEApbjM2wCiIvXmr1wU_Mb1TUzI"/>
+<div>
+<p class="font-bold">UX/UI Designer</p>
+<p class="text-sm text-text-secondary-light dark:text-text-secondary-dark">CreativeMinds - Remoto</p>
+</div>
+</div>
+<div class="flex flex-wrap gap-2">
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">Figma</span>
+<span class="bg-primary/20 text-primary text-xs font-semibold px-2 py-1 rounded-full">Sketch</span>
+</div>
+</div>
+</div>
+</section>
+<section class="mt-20">
+<h2 class="text-2xl font-bold tracking-tight text-center px-4 pb-6">Empresas que confían en nosotros</h2>
+<div class="px-4">
+<div class="flex flex-wrap items-center justify-center gap-8 md:gap-12">
+<img alt="Google logo" class="h-8 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARDLoJ6zbpAko4ycOpjgwlMVFHCO70G6ATXX5YupjmViXdvs_iD7HwAKIA_drmzFtOdkBhTkrsFd8UAMWcQrJ5BF_-FbvCQz6JIGyXmq5yNh7Oulyx79EajuWiMzMXruS0NuQrOKzKobNshVU6jT5vtnViTM_vmB59u2-x_lUH4wE2MPkcpEOAVbgCrFEpEZYW2Nr6rVKMZbkVNF6eu47cpVPTcfNaU4m8qCZ2elUMU6tbixqekMjCna8xVm0TuuMsl9Pbg4sdl6_t"/>
+<img alt="Microsoft logo" class="h-8 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd_WpI_YghxxNWvxnTBQTX_tnQJNvTvf0Tsv-yyKDJ-qsavIOLVIMV33IY2IJi4C26acj8gd_-rPu61naODfgMqOh2X9fDZV4cBO8cc0knGwVqdMoqLSdEenSuPTSN8AEc3aM8S_w2XN9YpsoYunL1bUIJBtxtUt_jQgTlrExNlW_kcPm06EAFejcp8Xx682eQF5huUqUjl7MGZLF0ojJPLZXKRRlizLueQwgu6dUgnHcPqVhXvrUqeG8bLSokifhT-jlcDh0GIkmA"/>
+<img alt="Amazon logo" class="h-8 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjN8_TfycuCFOT8IyH6f6_qw-z5Ue-F2qQsnnu3D-Fp81jhpJDCy4A16jbUB_YGhehLnAS2hjT82GooRczlaC2rqeZ55RZuY8bhIAwb-PEeuPwUcAPrblHHOubp_5ECyEzH1HZgMF1F93KBtkR9gvjKsFeUrJu15mrkCfANACiHqk9TBLXxaEpYCYowKka04BuLbmraMFJlPGeAhfFhL00l51GW9RFhQ28N_ClVB0Kjcn4653UY-BARXw2vtdSAN0O2apzD5L5pB0u"/>
+<img alt="Meta logo" class="h-8 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBs_WAaOZ7zSPR-8UaezD-qa1eBf9Sa2xAqap78-o8it2F_uRPbRwh7iGs5GGj4PwaShJ2pJMmey9LEmI-bWi2Qrd9lxtO2xEkl2f2qIg8jN89VVFnxNcEw7G5G0VwOoPXvblmlTMUlL4FyipefKUNfQuuQUZRqPCgw2GHvJTUR_6BKED_viEY_zTmplW-fvjgmgbngsbPWOqa6qq25MTlyC6WL6oFtNLcVF23Weo2ZF9CC20FeIZ5aJvt0UJ9SObva1EDT4QJfBsq4"/>
+<img alt="Netflix logo" class="h-8 grayscale hover:grayscale-0 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1jqk1FRPCoVZbDHUk8uhep0UZk2pjd9mioDwbQhs4pqxNN7w7C95XUfZcZFav6u6cfn8xmCTGqlznJZjtJI9rTE04naz2CCU-Tzbk4b9j4KEeLLmlxQ63u_o25_5kYp4BQZKUaSXjQxtAxFZO6EoGNHscCnuUwBbCKRwjNcMWcBPBx_MlQB-HMZgCOHBlWYhRIeS7eSDXcLRuzn2v7YrmTNibyzhO8XWSbRLbujTdJ5bV3ElvL1ZXqPfW5rCEgxyUofNzlGEBBQ2Y"/>
+</div>
+</div>
+</section>
+<section class="mt-24 grid md:grid-cols-2 gap-8 px-4">
+<div class="bg-container-light dark:bg-container-dark rounded-xl p-8 text-center flex flex-col items-center">
+<h3 class="text-2xl font-bold">¿Listo para tu próximo desafío?</h3>
+<p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">Únete a la comunidad y déjate encontrar por las mejores empresas tech.</p>
+<button class="mt-6 flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold hover:bg-blue-700">
+<span class="truncate">Crear mi perfil</span>
+</button>
+</div>
+<div class="bg-primary/10 dark:bg-primary/20 rounded-xl p-8 text-center flex flex-col items-center">
+<h3 class="text-2xl font-bold">¿Buscas talento de primer nivel?</h3>
+<p class="mt-2 text-text-secondary-light dark:text-text-secondary-dark">Publica tu oferta y accede a miles de programadores cualificados.</p>
+<button class="mt-6 flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-accent text-white text-base font-bold hover:bg-orange-600">
+<span class="truncate">Publicar una oferta</span>
+</button>
+</div>
+</section>
+</main>
+<footer class="border-t border-gray-200 dark:border-gray-700 mt-16 py-10">
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
+<div class="col-span-2 lg:col-span-1">
+<div class="flex items-center gap-2">
+<div class="size-6 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg"><path clip-rule="evenodd" d="M12.0799 24L4 19.2479L9.95537 8.75216L18.04 13.4961L18.0446 4H29.9554L29.96 13.4961L38.0446 8.75216L44 19.2479L35.92 24L44 28.7521L38.0446 39.2479L29.96 34.5039L29.9554 44H18.0446L18.04 34.5039L9.95537 39.2479L4 28.7521L12.0799 24Z" fill="currentColor" fill-rule="evenodd"></path></svg>
+</div>
+<h2 class="text-xl font-bold">DevJobs</h2>
+</div>
+<p class="mt-4 text-sm text-text-secondary-light dark:text-text-secondary-dark">© 2024 DevJobs. Todos los derechos reservados.</p>
+</div>
+<div>
+<h3 class="font-bold text-sm">Producto</h3>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Buscar Empleo</a></li>
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Publicar Oferta</a></li>
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Planes</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-sm">Empresa</h3>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Sobre Nosotros</a></li>
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Blog</a></li>
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Contacto</a></li>
+</ul>
+</div>
+<div>
+<h3 class="font-bold text-sm">Legal</h3>
+<ul class="mt-4 space-y-3">
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Política de Privacidad</a></li>
+<li><a class="text-sm text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#">Términos de Servicio</a></li>
+</ul>
+</div>
+<div class="flex items-start gap-4">
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#"><svg class="feather feather-linkedin" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect height="12" width="4" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#"><svg class="feather feather-twitter" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg></a>
+<a class="text-text-secondary-light dark:text-text-secondary-dark hover:text-primary dark:hover:text-primary" href="#"><svg class="feather feather-github" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a>
+</div>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>

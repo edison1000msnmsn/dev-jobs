@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<!--
+  Documento HTML5 estándar → asegura el "modo estándares" en navegadores modernos.
+-->
+<html lang="es">
+  <head>
+    <!-- =========================
+         METADATOS DEL DOCUMENTO
+    ========================== -->
+    <meta charset="UTF-8" />
+    <!-- Codificación UTF-8 para acentos/ñ y caracteres especiales -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Escala inicial en móviles → diseño responsive -->
+
+    <title>DevJobs</title>
+    <!-- Título visible en la pestaña del navegador -->
+
+    <meta
+      name="description"
+      content="Encuentra las mejores ofertas de trabajo para desarrolladores en DevJobs"
+    />
+    <!-- Descripción corta para SEO (resultados de búsqueda) -->
+
+    <!-- (Opcional futuro) <link rel="stylesheet" href="style.css"> -->
+  </head>
+
+  <body>
+    <!-- =======================================
+         ENCABEZADO (HEADER) CON NAVEGACIÓN
+    ======================================== -->
+    <header>
+      <div class="container-header">
+        <!-- Marca del sitio (usa <p> para no duplicar <h1>) -->
+        <p class="site-title"><strong>DevJobs</strong></p>
+
+        <!-- Menú principal; aria-label mejora accesibilidad -->
+        <nav aria-label="Navegación principal">
+          <a href="#buscar">Buscar Empleo</a>
+          <a href="#publicar">Publicar Empleo - Empresas</a>
+          <a href="#recursos">Recursos</a>
+        </nav>
+
+        <!-- Acciones de sesión/registro -->
+        <div class="auth">
+          <a href="#login">Iniciar Sesión</a>
+          <a href="#registro">Registrarse</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- =======================================
+         CONTENIDO PRINCIPAL
+    ======================================== -->
+    <main>
+      <!-- ==========================================
+           SECCIÓN HERO / BUSCADOR (UN SOLO <h1>)
+      =========================================== -->
+      <section id="buscar" aria-labelledby="hero-title">
+        <!-- Imagen ilustrativa del héroe
+             * Mejora: evita fijar width en HTML; controla tamaño con CSS. -->
+        <figure>
+          <img
+            src="./background.jpg"
+            alt="Persona programando frente a un monitor"
+            width="600
+            "
+          />
+        </figure>
+
+        <!-- ÚNICO h1 de la página para SEO/semántica -->
+        <h1 id="hero-title">Encuentra el trabajo de tus sueños en tecnología</h1>
+
+        <!-- Subtítulo descriptivo -->
+        <p>
+          Busca entre las miles de ofertas de las mejores empresas tecnológicas
+        </p>
+
+        <!-- ==========================
+             FORMULARIO DE BÚSQUEDA
+             (accesible + mejoras UX)
+        =========================== -->
+        <form action="#" method="get" aria-label="Buscador de empleos">
+          <!-- Icono lupa (decorativo):
+               * Mejora: aria-hidden="true" para que el lector de pantalla lo ignore -->
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler-search"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+            <path d="M21 21l-6 -6" />
+          </svg>
+
+          <!-- Campo de texto principal:
+               * Mejora: type="search" + autocomplete="off" para UX
+               * aria-label da contexto si no hay <label> visible -->
+          <input
+            type="search"
+            name="q"
+            placeholder="Buscar por título, tecnología o empresa"
+            aria-label="Puesto, tecnología o empresa"
+            autocomplete="off"
+          />
+
+          <!-- Icono ubicación (decorativo) -->
+          <svg
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler-map-pin"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+            <path
+              d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z"
+            />
+          </svg>
+
+          <!-- Campo de ubicación:
+               * Mejora: autocomplete="country-name" para sugerir países -->
+          <input
+            type="text"
+            name="lugar"
+            placeholder="Ciudad, país"
+            aria-label="Ciudad o país"
+            autocomplete="country-name"
+          />
+
+          <!-- Botón CTA del buscador -->
+          <button type="submit">Buscar Empleo</button>
+        </form>
+      </section>
+
+      <!-- =======================================
+           SECCIÓN: ÚLTIMAS OFERTAS (LISTADO)
+      ======================================== -->
+      <section aria-labelledby="ultimas-ofertas">
+        <h2 id="ultimas-ofertas">Últimas ofertas de empleo para desarrolladores</h2>
+
+        <!-- Cada oferta es un artículo independiente (semántica + SEO) -->
+        <article>
+          <h3>Frontend Developer</h3>
+          <p>Empresa XYZ · Remoto · Madrid, España</p>
+
+          <h4>Habilidades</h4>
+          <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>Frameworks: React, Vue o Angular</li>
+            <li>Experiencia con APIs RESTful</li>
+          </ul>
+
+          <p><small>Publicado hace 2 días</small></p>
+          <button type="button">Ver Oferta</button>
+        </article>
+
+        <article>
+          <h3>Backend Developer</h3>
+          <p>Empresa ABC · Presencial · Barcelona, España</p>
+
+          <h4>Habilidades</h4>
+          <ul>
+            <li>Node.js, Python o Ruby</li>
+            <li>Bases de datos SQL y NoSQL</li>
+            <li>Experiencia con servicios en la nube</li>
+          </ul>
+
+          <p><small>Publicado hace 5 días</small></p>
+          <button type="button">Ver Oferta</button>
+        </article>
+
+        <article>
+          <h3>Fullstack Developer</h3>
+          <p>Empresa 123 · Híbrido · Valencia, España</p>
+
+          <h4>Habilidades</h4>
+          <ul>
+            <li>JavaScript, HTML, CSS</li>
+            <li>Frameworks: React, Node.js</li>
+            <li>Experiencia con DevOps</li>
+          </ul>
+
+          <p><small>Publicado hace 1 semana</small></p>
+          <button type="button">Ver Oferta</button>
+        </article>
+
+        <article>
+          <h3>DevOps Engineer</h3>
+          <p>Empresa DevTech · Remoto · Sevilla, España</p>
+
+          <h4>Habilidades</h4>
+          <ul>
+            <li>Automatización de infraestructura</li>
+            <li>Contenedores y orquestación (Docker, Kubernetes)</li>
+            <li>Monitoreo y logging</li>
+          </ul>
+
+          <p><small>Publicado hace 3 días</small></p>
+          <button type="button">Ver Oferta</button>
+        </article>
+      </section>
+
+      <!-- =======================================
+           SECCIÓN: EMPRESAS QUE CONFÍAN
+      ======================================== -->
+      <section id="empresas" aria-labelledby="empresas-title">
+        <h3 id="empresas-title">Empresas que confían en nosotros</h3>
+
+        <!-- Galería de logos (mejor manejar tamaños en CSS) -->
+        <div class="logos">
+          <img src="./bytedance.png" alt="ByteDance" width="150"/>
+          <img src="./intel.png" alt="Intel" width="150"/>
+          <img src="./oracle.png" alt="Oracle" width="150" />
+          <img src="./meta.jpg" alt="Meta" width="150
+          "/>
+        </div>
+      </section>
+
+      <!-- =======================================
+           SECCIÓN: LLAMADOS A LA ACCIÓN (CTA)
+      ======================================== -->
+      <section id="publicar" aria-labelledby="cta-title-1">
+        <div class="cta-grid">
+          <!-- CTA para candidatos -->
+          <div class="cta">
+            <h2 id="cta-title-1">
+              ¿Listo para encontrar el trabajo de tus sueños?
+            </h2>
+            <p>
+              Únete a la comunidad y déjate encontrar por las mejores empresas tecnológicas.
+            </p>
+            <button type="button">Crear mi perfil</button>
+          </div>
+
+          <!-- CTA para empresas -->
+          <div class="cta">
+            <h2>¿Buscas talento de primer nivel?</h2>
+            <p>
+              Publica tus ofertas de empleo y conecta con desarrolladores cualificados.
+            </p>
+            <button type="button">Publicar oferta</button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =======================================
+         PIE DE PÁGINA (FOOTER)
+    ======================================== -->
+    <footer>
+      <!-- Marca y derechos -->
+      <h3>DevJobs</h3>
+      <small>© 2024 DevJobs. Todos los derechos reservados.</small>
+
+      <!-- Enlaces del producto -->
+      <h3>Producto</h3>
+      <nav aria-label="Sección Producto">
+        <a href="#buscar">Buscar Empleo</a>
+        <a href="#publicar">Publicar oferta</a>
+        <a href="#planes">Planes</a>
+      </nav>
+
+      <!-- Enlaces informativos -->
+      <h3>Empresa</h3>
+      <nav aria-label="Sección Empresa">
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#blog">Blog</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+
+      <!-- Enlaces legales -->
+      <h3>Legal</h3>
+      <nav aria-label="Sección Legal">
+        <a href="#privacidad">Política de Privacidad</a>
+        <a href="#terminos">Términos de Servicio</a>
+      </nav>
+
+      <!-- Redes sociales
+           * Mejora: abre en nueva pestaña y usa rel="noopener" -->
+      <h3>Síguenos</h3>
+      <nav aria-label="Redes sociales">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </footer>
+  </body>
+</html>
